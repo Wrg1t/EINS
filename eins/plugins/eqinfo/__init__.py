@@ -1,9 +1,11 @@
 import nonebot
 from json import dumps
 from .api import InfoParser
+from configparser import ConfigParser
 
-gids = [123456] # 指定的QQ群号码，需要为int类型
-
+config = ConfigParser()
+config.read('eins\\plugins\\eqinfo\\config.ini')
+gids = eval(config['EINS']['gids'])
 
 @nonebot.scheduler.scheduled_job('interval', seconds = 30)
 async def getMessage():
