@@ -50,7 +50,7 @@ account: # 账号相关
 ```
 
 为您所需要的内容，其他配置参考[go-cqhttp文档](https://docs.go-cqhttp.org/guide/config.html#配置信息)。
-但并不推荐您直接在该处填入密码，为方便服务器部署，推荐在本地登录后一并将目录中的`session.token`上传到服务器，并且建议[使用Aoki](#4.使用Aoki登录)。
+但并不推荐您直接在该处填入密码，为方便服务器部署，推荐在本地登录后一并将目录中的`session.token`上传到服务器，并且建议[使用Aoki](#4.Aoki)。
 
 ### EINS
 除了go-cqhttp的配置文件外，您还需要修改`eins\plugins\eqinfo\config.ini`中的`gids`，在列表内填入你需要广播QQ群号。
