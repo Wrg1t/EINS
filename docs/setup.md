@@ -4,7 +4,7 @@
 
 ## 1.安装EINS
 
-Clone或下载[本库](https://github.com/Wrg1t/EINS/archive/refs/heads/master.zip)并保存到你喜欢的目录下。
+Clone或下载[本库](https://github.com/Wrg1t/EINS/archive/refs/heads/master.zip)并保存到您喜欢的目录下。
 
 并且在EINS目录内执行：
 
@@ -53,7 +53,7 @@ account: # 账号相关
 但并不推荐您直接在该处填入密码，为方便服务器部署，推荐在本地登录后一并将目录中的`session.token`上传到服务器，并且建议[使用Aoki](#4.Aoki)。
 
 ### EINS
-除了go-cqhttp的配置文件外，您还需要修改`eins\plugins\eqinfo\config.ini`中的`gids`，在列表内填入你需要广播QQ群号。
+除了go-cqhttp的配置文件外，您还需要修改`eins\plugins\eqinfo\config.ini`中的`gids`，在列表内填入您需要广播QQ群号。
 
 ## 4.Aoki
 
