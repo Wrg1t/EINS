@@ -8,7 +8,7 @@ Clone或下载[本库](https://github.com/Wrg1t/EINS/archive/refs/heads/master.z
 
 并且在EINS目录内执行：
 
-```pip install -r requirements.txt```
+`pip install -r requirements.txt`
 
 ## 2.安装go-cqhttp
 从go-cqhttp的[最新Release](https://github.com/Mrs4s/go-cqhttp/releases)处选择适合您平台的版本下载并放置到EINS所处的同一目录下。
