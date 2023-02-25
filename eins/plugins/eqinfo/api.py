@@ -125,19 +125,23 @@ class InfoParser:
         return self.ceic_info
 
     def parseCoord(self, coord):
-        coord = coord[:-1] + '+' # 将坐标构造成这种形式: "+38.3+141.6-60000+", 以便于进一步解析
+        # 将坐标构造成这种形式: "+38.3+141.6-60000+", 以便于进一步解析。
+        coord = coord[:-1] + '+'
         coord_list = []
         data = ''
         flag = 0
-
-        for i in coord:  # 留下"+"或"-"之间的内容, 上方需要在末尾加"+"正是这个原因
+        
+        # 留下"+"或"-"之间的内容, 上方需要在末尾加"+"正是这个原因。
+        for i in coord:  
             i = str(i)
 
+            # 将"+"和"-"都过滤掉。
             if i == '+' or i == '-':
                 flag += 1
-                i = ''  # 将"+"和"-"都过滤掉
+                i = ''  
 
-            data += i # 将过滤下的字符逐个拼接为所需字符串
+            # 将过滤下的字符逐个拼接为所需字符串。
+            data += i 
             if flag == 2:
                 coord_list.append(data)
                 data = ''
