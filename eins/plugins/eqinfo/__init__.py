@@ -7,12 +7,13 @@ config = ConfigParser()
 config.read('eins\\plugins\\eqinfo\\config.ini')
 gids = eval(config['EINS']['gids'])
 
-@nonebot.scheduler.scheduled_job('interval', seconds = 30)
+storedList = [''] * 10
+bot = nonebot.get_bot()
+
+@nonebot.scheduler.scheduled_job('interval', seconds = 1)
 async def getMessage():
-    bot = nonebot.get_bot()
     i = InfoParser()
     latestList = [i.jma_info, i.ceic_info, i.nhk_img]
-    storedList = [''] * len(latestList)
     
     for i in range(0, len(latestList)):
         if storedList[i] != latestList[i] and latestList[i] != '':
@@ -21,7 +22,8 @@ async def getMessage():
             
             if not isinstance(info, dict):
                 message = info
-            else: # 将数据构造为地图卡片的json格式
+            else: 
+                # 将数据构造为地图卡片的json格式。
                 message = {
                         "app": "com.tencent.map",
                         "desc": "地图",
